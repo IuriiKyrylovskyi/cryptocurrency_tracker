@@ -5,6 +5,7 @@ import Search from './Search';
 
 const App = () => {
   const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetchCryptoList()
@@ -16,10 +17,18 @@ const App = () => {
 
   console.log(coins);
 
+  const handleChange = e => {
+    setSearch(e.target.value);
+  };
+
+  const filteredCoins = coins.filter(coin =>
+    coin.name.toLowerCase().includes(search.toLocaleLowerCase()),
+  );
+
   return (
     <div className="main">
-      <Search />
-      <Coins coins={coins} />
+      <Search search={search} handleInput={handleChange} />
+      <Coins coins={filteredCoins} />
     </div>
   );
 };
