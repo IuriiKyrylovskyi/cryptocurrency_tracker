@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className="main">
-      <Search search={search} handleInput={handleChange} />
+      <Search handleInput={handleChange} />
       <Coins coins={filteredCoins} />
     </div>
   );
