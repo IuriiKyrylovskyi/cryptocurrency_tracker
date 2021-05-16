@@ -5,14 +5,21 @@ const App = () => {
   const [coins, setCoins] = useState([]);
 
   useEffect(() => {
-    fetchCryptoList().then(data => {
-      setCoins(data);
-    }).catch(error => new Error(console.log(error)));
+    fetchCryptoList()
+      .then(data => {
+        setCoins(data);
+      })
+      .catch(error => new Error(error));
   }, []);
 
   return (
     <div>
-      <h1 className="1">API</h1>
+      <div className="search">
+        <h1 className="text">Search a currency</h1>
+        <form>
+          <input type="text" placeholder="Search" className="input" />
+        </form>
+      </div>
     </div>
   );
 };
