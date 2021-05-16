@@ -14,12 +14,11 @@ body{
 }
 
 .main {
-  /* position: relative; */
   padding-top: 64px;
   padding-bottom: 64px;
   padding-left: 30px;
   padding-right: 30px;
-
+  width: calc(100vw - 20px);
 }
 
 .load{
@@ -28,7 +27,6 @@ body{
  align-items: center;
 }
 .load-icon{
-  /* position: absolute; */
   top: 50px;
   width: 50px;
   height: 50px;
@@ -65,15 +63,18 @@ body{
 
 .input {
   padding-left: 16px;
-  width: 300px;
+  padding-right: 16px;
+  max-width: 300px;
+  min-width: 250px;
+  width: 100%;
   height: 50px;
   border-radius: 4px;
   border: none;
   background-image: linear-gradient(
     -225deg,
-    #ac32e4 0%,
-    #7918f2 48%,
-    #4801ff 100%
+    #a33931 0%,
+    #b8f218 48%,
+    #4d01ff 100%
   );
 
   color: #e2e2e2;
@@ -88,27 +89,25 @@ body{
   justify-content: center;
   padding: 20px;
   max-width: 900px;
-  min-width: 610px;
+  min-width: 750px;
   color: #fff;
+  margin: 0 auto;
 }
 .coins__row{
   display: flex;
-  /* justify-content: space-between; */
   width: 100%;
   font-size: 12px;
 }
 .coins__coin{width: 300px;}
 .coins__price{width: 110px;text-align: right;}
+.coins__volume{width: 150px; text-align: right;}
 .coins__price-change24{flex: 1 0 auto; text-align: right;}
 
 .coin {
   display: flex;
-  /* justify-content: space-between; */
-  /* justify-content: start; */
   align-items: center;
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
-  max-width: 900px;
 }
 
 .coin__name{
@@ -129,7 +128,11 @@ body{
   width: 30px;
   margin-right: 10px;
 }
-
+.coin__volume{
+  flex: 0 0 150px;
+  width: 150px;
+  text-align: right;
+}
 .coin__symbol {
   text-transform: uppercase;
 }

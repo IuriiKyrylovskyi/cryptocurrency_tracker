@@ -15,6 +15,7 @@ const Coins = ({ coins }) => {
     <div className="coins">
       <div className="coins__row">
         <h3 className="coins__coin">Coin</h3>
+        <h3 className="coins__volume">Volume</h3>
         <h3 className="coins__price">Price</h3>
         <h3 className="coins__price-change24">24h change</h3>
       </div>
