@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCryptoList } from './gateway';
-import Coin from './Coin';
+import Coins from './Coins';
 import Search from './Search';
 
 const App = () => {
@@ -19,12 +19,7 @@ const App = () => {
   return (
     <div className="main">
       <Search />
-      {
-        // coins.lenght > 0 &&
-        coins.map(coin => (
-          <Coin key={coin.id} coin={coin} />
-        ))
-      }
+      <Coins coins={coins} />
     </div>
   );
 };
