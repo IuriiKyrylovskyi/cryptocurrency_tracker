@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCryptoList } from './gateway';
+import Coin from './Coin';
+import Search from './Search';
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -12,14 +14,17 @@ const App = () => {
       .catch(error => new Error(error));
   }, []);
 
+  console.log(coins);
+
   return (
-    <div>
-      <div className="search">
-        <h1 className="text">Search a currency</h1>
-        <form>
-          <input type="text" placeholder="Search" className="input" />
-        </form>
-      </div>
+    <div className="main">
+      <Search />
+      {
+        // coins.lenght > 0 &&
+        coins.map(coin => (
+          <Coin key={coin.id} coin={coin} />
+        ))
+      }
     </div>
   );
 };
