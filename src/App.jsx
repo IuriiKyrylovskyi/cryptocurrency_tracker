@@ -20,8 +20,8 @@ const App = () => {
     fetchData();
 
     const timer = setInterval(() => fetchData(), FETCH_INTERVAL);
+
     return () => clearInterval(timer);
-    // return fetchData();
   }, []);
 
   console.log(coins);
