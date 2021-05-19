@@ -3,16 +3,26 @@ import { fetchCryptoList } from './gateway';
 import Coins from './Coins';
 import Search from './Search';
 
+const FETCH_INTERVAL = 10000;
+
 const App = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
 
-  useEffect(() => {
+  const fetchData = () =>
     fetchCryptoList()
       .then(data => {
         setCoins(data);
       })
       .catch(error => new Error(error));
+
+  useEffect(() => {
+    // fetchData();
+
+    // const timer =
+    setInterval(() => fetchData(), FETCH_INTERVAL);
+    // return clearInterval(timer);
+    return fetchData();
   }, []);
 
   console.log(coins);
