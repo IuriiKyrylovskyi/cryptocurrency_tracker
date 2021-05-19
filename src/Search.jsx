@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Search = ({ handleInput }) => {
   return (
@@ -9,6 +10,10 @@ const Search = ({ handleInput }) => {
       </form>
     </div>
   );
+};
+
+Search.propTypes = {
+  handleInput: PropTypes.func,
 };
 
 export default Search;

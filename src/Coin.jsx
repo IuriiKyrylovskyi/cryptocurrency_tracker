@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsArrowDown, BsArrowUp } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 const Coin = ({ coin }) => {
   const { image, name, symbol, current_price, price_change_percentage_24h, total_volume } = coin;
@@ -29,6 +30,15 @@ const Coin = ({ coin }) => {
       </div>
     </div>
   );
+};
+
+Coin.propTypes = {
+  coins: PropTypes.array,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  symbol: PropTypes.string,
+  current_price: PropTypes.number,
+  price_change_percentage_24h: PropTypes.number,
 };
 
 export default Coin;

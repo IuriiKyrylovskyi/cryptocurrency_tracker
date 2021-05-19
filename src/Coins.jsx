@@ -1,6 +1,7 @@
 import React from 'react';
 import Coin from './Coin';
 import { AiOutlineReload } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 
 const Coins = ({ coins }) => {
   if (coins.length === 0) {
@@ -24,6 +25,10 @@ const Coins = ({ coins }) => {
       ))}
     </div>
   );
+};
+
+Coins.propTypes = {
+  coins: PropTypes.array,
 };
 
 export default Coins;
