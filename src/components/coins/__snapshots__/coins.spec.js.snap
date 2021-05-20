@@ -12,3 +12,86 @@ exports[`Coins component should render Coins component should render component c
   </p>
 </div>
 `;
+
+exports[`Coins component should render Coins component with props should render .coins__list with 2 items 1`] = `
+<div
+  className="coins"
+>
+  <div
+    className="coins__row"
+  >
+    <h3
+      className="coins__coin"
+    >
+      Coin
+    </h3>
+    <h3
+      className="coins__volume"
+    >
+      Volume
+    </h3>
+    <h3
+      className="coins__price"
+    >
+      Price
+    </h3>
+    <h3
+      className="coins__price-change24"
+    >
+      24h change
+    </h3>
+  </div>
+  <ul
+    className="coins__list"
+  >
+    <Coin
+      coin={
+        Object {
+          "current_price": 41593,
+          "id": "bitcoin",
+          "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+          "market_cap": 778357915130,
+          "market_cap_change_percentage_24h": -4.57821,
+          "max_supply": 21000000,
+          "name": "Bitcoin",
+          "price_change_24h": -1971.47108004,
+          "price_change_percentage_24h": -4.52542,
+          "symbol": "btc",
+          "total_supply": 21000000,
+          "total_volume": 141884973661,
+        }
+      }
+      current_price={100}
+      image="coin image"
+      key="bitcoin"
+      name="coin name"
+      price_change_percentage_24h={0}
+      symbol=""
+    />
+    <Coin
+      coin={
+        Object {
+          "current_price": 415930,
+          "id": "dogecoin",
+          "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+          "market_cap": 778357915130,
+          "market_cap_change_percentage_24h": -4.57821,
+          "max_supply": 21000000,
+          "name": "dogecoin",
+          "price_change_24h": -1971.47108004,
+          "price_change_percentage_24h": -4.52542,
+          "symbol": "dgc",
+          "total_supply": 21000000,
+          "total_volume": 141884973661,
+        }
+      }
+      current_price={100}
+      image="coin image"
+      key="dogecoin"
+      name="coin name"
+      price_change_percentage_24h={0}
+      symbol=""
+    />
+  </ul>
+</div>
+`;

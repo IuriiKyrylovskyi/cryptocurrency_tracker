@@ -3,9 +3,8 @@ import { shallow } from 'enzyme';
 // import { fetchCryptoList } from '../../gateway';
 import Coins from './Coins';
 
-const setUp = props => shallow(<Coins {...props} />);
-
-const props = [
+// const props = {
+const coins = [
   {
     id: 'bitcoin',
     symbol: 'btc',
@@ -35,6 +34,9 @@ const props = [
     total_volume: 141884973661,
   },
 ];
+// };
+
+const setUp = list => shallow(<Coins props={list} />);
 
 let component;
 
@@ -51,30 +53,45 @@ describe('Coins component', () => {
     it('should render component correctly', () => {
       expect(component).toMatchSnapshot();
     });
+
     // it('should call fetch in useEffect', () => {
     //   expect(global.fetch).toMatchSnapshot();
     // });
 
-    // it('should contain .coins wrapper', () => {
-    //   const wrapper = component.find('.coins');
-
-    //   expect(wrapper.length).toBe(1);
-    // });
+    it('should contain .load', () => {
+      const load = component.find('.load');
+      expect(load.length).toBe(1);
+    });
   });
 
   describe('should render Coins component with props', () => {
-    it('should render .coins__list with 2 items', () => {
-      component = setUp(props);
-      const list = component.find('.coins__list');
-      expect(list).toHaveLength(2);
+    beforeEach(() => {
+      component = setUp(coins);
     });
-  });
 
-  describe('should render empty list', () => {
-    it('should render .coins__list with 0 items', () => {
-      component = setUp([]);
-      const list = component.find('.coins__list');
-      expect(list.length).toBe(0);
+    it('should render .coins__list with 2 items', () => {
+      expect(component).toMatchSnapshot();
+    });
+
+    it('should contain .coins', () => {
+      const coinsElem = component.find('.coins');
+      expect(coinsElem).toHaveLength(1);
     });
   });
+  // describe('should render Coins component with props', () => {
+  //   it('should render .coins__list with 2 items', () => {
+  //     component = setUp({ props });
+
+  //     const list = component.find('.coins');
+  //     expect(list).toHaveLength(1);
+  //   });
+  // });
+
+  // describe('should render empty list', () => {
+  //   it('should render .coins__list with 0 items', () => {
+  //     component = setUp(props);
+  //     const list = component.find('.coins__list');
+  //     expect(list.length).toBe(3);
+  //   });
+  // });
 });

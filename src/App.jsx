@@ -33,7 +33,7 @@ const App = () => {
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLocaleLowerCase()),
   );
-
+  
   return (
     <div className="main">
       <Search handleInput={handleChange} />
