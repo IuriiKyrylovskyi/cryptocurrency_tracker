@@ -68,5 +68,10 @@ describe('Coins component', () => {
       const coinsElem = component.find('.coins');
       expect(coinsElem).toHaveLength(1);
     });
+
+    it('should contain 2 items in .coins__list', () => {
+      const coinsElem = component.find('.coins__list Coin');
+      expect(coinsElem).toHaveLength(2);
+    });
   });
 });

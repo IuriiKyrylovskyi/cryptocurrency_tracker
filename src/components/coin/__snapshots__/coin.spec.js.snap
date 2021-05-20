@@ -1,6 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Coin component should render Coin component should render component correctly 1`] = `
+exports[`Coin component should render Coin component with green should render component correctly 1`] = `
+<div
+  className="coin"
+>
+  <div
+    className="coin__name"
+  >
+    <img
+      alt="crypto"
+      src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+    />
+    <h1>
+      Bitcoin
+    </h1>
+    <p
+      className="coin__symbol"
+    >
+      btc
+    </p>
+  </div>
+  <div
+    className="coin__volume"
+  >
+    $ 
+    141 884
+     M 
+  </div>
+  <div
+    className="coin__data"
+  >
+    <p
+      className="coin__price"
+    >
+      $ 
+      41 593
+    </p>
+    <p
+      className="coin__volume green"
+    >
+      <BsArrowUp />
+      4.53
+       %
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Coin component should render Coin component with red should render component correctly 1`] = `
 <div
   className="coin"
 >

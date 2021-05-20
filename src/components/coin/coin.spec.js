@@ -1,8 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Coin from './Coin';
+import { BsArrowDown, BsArrowUp } from 'react-icons/bs';
 
-const props = {
+const propsRed = {
   id: 'bitcoin',
   symbol: 'btc',
   name: 'Bitcoin',
@@ -36,9 +37,9 @@ const setUp = props => shallow(<Coin coin={props} />);
 let component;
 
 describe('Coin component', () => {
-  describe('should render Coin component', () => {
+  describe('should render Coin component with red', () => {
     beforeEach(() => {
-      component = setUp(props);
+      component = setUp(propsRed);
     });
 
     it('should render component correctly', () => {
@@ -50,12 +51,6 @@ describe('Coin component', () => {
 
       expect(wrapper.length).toBe(1);
     });
-  });
-
-  describe('should render Coin component with props', () => {
-    beforeEach(() => {
-      component = setUp(props);
-    });
 
     it('should render .coin__volume.red correctly', () => {
       const wrapper = component.find('.coin__volume.red');
@@ -66,21 +61,41 @@ describe('Coin component', () => {
       const wrapper = component.find('.coin__volume.green');
       expect(wrapper.length).toBe(0);
     });
+
+    it('should render red arrow', () => {
+      const wrapper = component.find(BsArrowDown);
+      expect(wrapper).toHaveLength(1);
+    });
   });
 
-  describe('should render Coin component with propsGreen', () => {
+  describe('should render Coin component with green', () => {
     beforeEach(() => {
       component = setUp(propsGreen);
     });
 
-    it('should render .coin__volume.red correctly', () => {
+    it('should render component correctly', () => {
+      expect(component).toMatchSnapshot();
+    });
+
+    it('should contain .coin wrapper', () => {
+      const wrapper = component.find('.coin');
+
+      expect(wrapper.length).toBe(1);
+    });
+
+    it('should render .coin__volume.green correctly', () => {
+      const wrapper = component.find('.coin__volume.green');
+      expect(wrapper.length).toBe(1);
+    });
+
+    it('should not render .coin__volume.red', () => {
       const wrapper = component.find('.coin__volume.red');
       expect(wrapper.length).toBe(0);
     });
 
-    it('should not render .coin__volume.green', () => {
-      const wrapper = component.find('.coin__volume.green');
-      expect(wrapper.length).toBe(1);
+    it('should render green arrow', () => {
+      const wrapper = component.find(BsArrowUp);
+      expect(wrapper).toHaveLength(1);
     });
   });
 });
