@@ -32,7 +32,6 @@ const Coins = ({ coins }) => {
 
 Coins.propTypes = {
   coins: PropTypes.array,
-  // coins: PropTypes.arrayOf(PropTypes.object),
 };
 
 Coins.defaultProps = {
