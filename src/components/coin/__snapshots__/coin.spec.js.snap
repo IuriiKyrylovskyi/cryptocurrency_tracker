@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Coin component should render Coin component with green should render component correctly 1`] = `
+exports[`Coin component should render Coin component with green color should render component correctly 1`] = `
 <div
   className="coin"
 >
@@ -47,7 +47,7 @@ exports[`Coin component should render Coin component with green should render co
 </div>
 `;
 
-exports[`Coin component should render Coin component with red should render component correctly 1`] = `
+exports[`Coin component should render Coin component with red color should render component correctly 1`] = `
 <div
   className="coin"
 >

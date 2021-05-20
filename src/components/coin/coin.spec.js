@@ -37,7 +37,7 @@ const setUp = props => shallow(<Coin coin={props} />);
 let component;
 
 describe('Coin component', () => {
-  describe('should render Coin component with red', () => {
+  describe('should render Coin component with red color', () => {
     beforeEach(() => {
       component = setUp(propsRed);
     });
@@ -68,7 +68,7 @@ describe('Coin component', () => {
     });
   });
 
-  describe('should render Coin component with green', () => {
+  describe('should render Coin component with green color', () => {
     beforeEach(() => {
       component = setUp(propsGreen);
     });
