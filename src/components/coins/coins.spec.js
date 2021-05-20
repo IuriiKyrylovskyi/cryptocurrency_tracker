@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import Coins from './Coins';
 
 // const props = {
-const coins = [
+const coinsList = [
   {
     id: 'bitcoin',
     symbol: 'btc',
@@ -36,7 +36,7 @@ const coins = [
 ];
 // };
 
-const setUp = list => shallow(<Coins props={list} />);
+const setUp = list => shallow(<Coins coinsList={list} />);
 
 let component;
 
@@ -66,7 +66,7 @@ describe('Coins component', () => {
 
   describe('should render Coins component with props', () => {
     beforeEach(() => {
-      component = setUp(coins);
+      component = setUp(coinsList);
     });
 
     it('should render .coins__list with 2 items', () => {
