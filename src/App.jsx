@@ -24,8 +24,6 @@ const App = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // console.log(coins);
-
   const handleChange = e => {
     setSearch(e.target.value);
   };
