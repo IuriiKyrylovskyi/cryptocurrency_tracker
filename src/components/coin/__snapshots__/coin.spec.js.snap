@@ -9,20 +9,22 @@ exports[`Coin component should render Coin component should render component cor
   >
     <img
       alt="crypto"
-      src="coin image"
+      src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
     />
     <h1>
-      coin name
+      Bitcoin
     </h1>
     <p
       className="coin__symbol"
-    />
+    >
+      btc
+    </p>
   </div>
   <div
     className="coin__volume"
   >
     $ 
-    NaN
+    141 884
      M 
   </div>
   <div
@@ -32,13 +34,13 @@ exports[`Coin component should render Coin component should render component cor
       className="coin__price"
     >
       $ 
-      0
+      41 593
     </p>
     <p
       className="coin__volume red"
     >
       <BsArrowDown />
-      0.00
+      4.53
        %
     </p>
   </div>

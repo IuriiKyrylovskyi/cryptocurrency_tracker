@@ -61,12 +61,7 @@ exports[`Coins component should render Coins component with props should render 
           "total_volume": 141884973661,
         }
       }
-      current_price={100}
-      image="coin image"
       key="bitcoin"
-      name="coin name"
-      price_change_percentage_24h={0}
-      symbol=""
     />
     <Coin
       coin={
@@ -85,12 +80,7 @@ exports[`Coins component should render Coins component with props should render 
           "total_volume": 141884973661,
         }
       }
-      current_price={100}
-      image="coin image"
       key="dogecoin"
-      name="coin name"
-      price_change_percentage_24h={0}
-      symbol=""
     />
   </ul>
 </div>
