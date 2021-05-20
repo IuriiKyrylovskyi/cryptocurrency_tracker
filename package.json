@@ -42,6 +42,7 @@
     "react-icons": "^4.2.0"
   },
   "jest": {
+    "coverageReporters": ["text"],
     "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

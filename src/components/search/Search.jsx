@@ -16,4 +16,8 @@ Search.propTypes = {
   handleInput: PropTypes.func,
 };
 
+Search.defaultProps = {
+  handleInput: () => {},
+};
+
 export default Search;

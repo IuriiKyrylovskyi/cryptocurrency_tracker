@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coins component should render Coins component should render component correctly 1`] = `
+<div
+  className="load"
+>
+  <AiOutlineReload
+    className="load-icon"
+  />
+  <p>
+    Loading...
+  </p>
+</div>
+`;

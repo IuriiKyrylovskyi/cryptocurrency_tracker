@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render Search component 1`] = `
+<div
+  className="search"
+>
+  <h1
+    className="text"
+  >
+    Search a currency
+  </h1>
+  <form>
+    <input
+      className="input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+    />
+  </form>
+</div>
+`;

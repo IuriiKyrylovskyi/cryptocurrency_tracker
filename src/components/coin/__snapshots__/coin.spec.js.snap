@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin component should render Coin component should render component correctly 1`] = `
+<div
+  className="coin"
+>
+  <div
+    className="coin__name"
+  >
+    <img
+      alt="crypto"
+      src="coin image"
+    />
+    <h1>
+      coin name
+    </h1>
+    <p
+      className="coin__symbol"
+    />
+  </div>
+  <div
+    className="coin__volume"
+  >
+    $ 
+    NaN
+     M 
+  </div>
+  <div
+    className="coin__data"
+  >
+    <p
+      className="coin__price"
+    >
+      $ 
+      0
+    </p>
+    <p
+      className="coin__volume red"
+    >
+      <BsArrowDown />
+      0.00
+       %
+    </p>
+  </div>
+</div>
+`;

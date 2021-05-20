@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCryptoList } from './gateway';
-import Coins from './Coins';
-import Search from './Search';
+import Coins from './components/coins/Coins';
+import Search from './components/search/Search';
 
 const FETCH_INTERVAL = 10000;
 
@@ -24,7 +24,7 @@ const App = () => {
     return () => clearInterval(timer);
   }, []);
 
-  console.log(coins);
+  // console.log(coins);
 
   const handleChange = e => {
     setSearch(e.target.value);

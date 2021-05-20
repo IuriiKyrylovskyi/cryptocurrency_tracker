@@ -33,12 +33,27 @@ const Coin = ({ coin }) => {
 };
 
 Coin.propTypes = {
-  coins: PropTypes.array,
+  coin: PropTypes.object,
   image: PropTypes.string,
   name: PropTypes.string,
   symbol: PropTypes.string,
   current_price: PropTypes.number,
   price_change_percentage_24h: PropTypes.number,
+};
+
+Coin.defaultProps = {
+  coin: {
+    image: 'coin image',
+    name: 'coin name',
+    symbol: '',
+    current_price: 0,
+    price_change_percentage_24h: Number(+0),
+  },
+  image: 'coin image',
+  name: 'coin name',
+  symbol: '',
+  current_price: 100,
+  price_change_percentage_24h: Number(+0),
 };
 
 export default Coin;

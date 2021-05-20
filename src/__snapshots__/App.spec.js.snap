@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App component renders without crashing 1`] = `
+<div
+  className="main"
+>
+  <Search
+    handleInput={[Function]}
+  />
+  <Coins
+    coins={Array []}
+  />
+</div>
+`;
