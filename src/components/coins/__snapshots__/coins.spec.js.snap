@@ -13,7 +13,7 @@ exports[`Coins component should render Coins component should render component c
 </div>
 `;
 
-exports[`Coins component should render Coins component with props should render .coins__list with 2 items 1`] = `
+exports[`Coins component should render Coins component with props should render .coins 1`] = `
 <div
   className="coins"
 >
